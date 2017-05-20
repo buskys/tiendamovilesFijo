@@ -61,6 +61,14 @@ public class Usuario implements Comparable<Object> {
         return this.getContraseña().equals(contraseña);
     }
 
+    public String toFileString(){
+        return this.getNombre() + ";" + this.getApellido1() + ";" + this.getApellido2() + ";" + this.getUsuario() + ";" + this.getContraseña() + ";\n";
+    }
+
+    public static Usuario fromFileString(String str){
+        String[] partes = str.split(";");
+        return new Usuario(partes[0],partes[1],partes[2],partes[3],partes[4]);
+    }
     @Override
     public String toString() {
         return "Nombre: " + nombre + "\nApellidos: " + apellido1 + " " + apellido2 + "\nUsuario: " + usuario;

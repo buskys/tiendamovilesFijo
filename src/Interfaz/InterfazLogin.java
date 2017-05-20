@@ -22,6 +22,7 @@ public class InterfazLogin extends javax.swing.JFrame {
      * Creates new form InterfazUsuario
      */
     public InterfazLogin() {
+        usuarios.initializeList();
         initComponents();
     }
 
@@ -208,7 +209,6 @@ public class InterfazLogin extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
