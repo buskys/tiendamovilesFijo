@@ -1,9 +1,6 @@
 package clases;
 
-import Interfaz.*;
-import clases.*;
 
-import static com.sun.org.apache.xml.internal.security.keys.keyresolver.KeyResolver.iterator;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -11,7 +8,6 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.*;
 
-import static java.util.Spliterators.iterator;
 
 /**
  * @author Adrián Bermúdez Vázquez
@@ -89,40 +85,4 @@ public class ListaUsuarios {
     public List<Usuario> listaUsuario() {
         return usuarios;
     }
-
-//    public void escribirDatos() throws FileNotFoundException, IOException {
-//        try {
-//            ObjectOutputStream ficheiro = new ObjectOutputStream(new FileOutputStream("usuarios.data"));
-//            for (int i = 0; i < usuarios.size(); i++) {
-//                Usuario usuario1 = usuarios.get(i);//Opcional??
-//                ficheiro.writeObject(usuario1);
-//            }
-//            ficheiro.close();
-//        } catch (FileNotFoundException e) {
-//            System.out.println("No se encuentra el fichero");
-//
-//        } catch (IOException e) {
-//            System.out.println("Error!");
-//        }
-//    }
-//
-//    public void leerDatos() throws FileNotFoundException, IOException, ClassNotFoundException {
-//        try {
-//            ObjectInputStream ficheiro = new ObjectInputStream(new FileInputStream("usuarios.data"));
-//            Usuario usuario2 = (Usuario) ficheiro.readObject();
-//            while (usuario2 != null) {
-//                usuarios.add(usuario2);//Usuarios.añadir??
-//                usuario2 = (Usuario) ficheiro.readObject();
-//            }
-//            ficheiro.close();
-//        } catch (EOFException e) {
-//            System.out.println("Final fichero");
-//        } catch (ClassNotFoundException e) {
-//            System.out.println("No se encuentra fichero");
-//        } catch (IOException e) {
-//            System.out.println("Error");
-//        }
-//
-//    }
-
 }
